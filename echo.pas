@@ -45,7 +45,7 @@ type
 
   { a message queue for thread uncupling/detachment }
   { TbcMessageQueue }
-  TbcMessageQueue = class(TaaQueue)
+  TbcMessageQueue = class(TbcQueue)
     procedure EnQueue(aMessage: TbcMessage);
     function Peek: TbcMessage; { does NOT remove from queue, only looking }
     function DeQueue: TbcMessage;
@@ -134,19 +134,19 @@ end;
 procedure TbcMessageQueue.EnQueue(aMessage: TbcMessage);
 begin
   En_Queue(pointer(aMessage));
-  Notify(aMessage,qnEnqueued);
+//  Notify(aMessage,qnEnqueued);
 end;
 
 function TbcMessageQueue.Peek: TbcMessage;
 begin
   Result:= TbcMessage(Examine);
-  Notify(Result,qnExamined);
+//  Notify(Result,qnExamined);
 end;
 
 function TbcMessageQueue.DeQueue: TbcMessage;
 begin
   Result:= TbcMessage(De_Queue);
-  Notify(Result,qnDequeued);
+//  Notify(Result,qnDequeued);
 end;
 
 { TbcMessage }

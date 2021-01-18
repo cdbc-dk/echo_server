@@ -55,8 +55,8 @@
       <Filename Value="echo_srv"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../library_2020;../library_2020/synapse/source/lib"/>
+      <IncludeFiles Value="$(ProjOutDir);../../bc_rtl/include"/>
+      <OtherUnitFiles Value="../../bc_rtl;../../bc_rtl/synapse/source/lib"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

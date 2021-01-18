@@ -9,7 +9,7 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  LCLVersion = '2.0.4.0'
+  LCLVersion = '2.0.10.0'
   object btnStartSrv: TButton
     Left = 37
     Height = 25
@@ -46,7 +46,7 @@ object frmMain: TfrmMain
     Enabled = False
     Interval = 1
     OnTimer = Timer1Timer
-    left = 4
-    top = 5
+    Left = 4
+    Top = 5
   end
 end

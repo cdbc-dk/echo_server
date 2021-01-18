@@ -125,8 +125,8 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   btnStopSrv.Enabled:= false;
-  fObserver:= TMessageQueueObserver.Create;
-  MsgQueue.FPOAttachObserver(fObserver);
+//  fObserver:= TMessageQueueObserver.Create;
+//  MsgQueue.FPOAttachObserver(fObserver);
   Caption:= 'Echo Server - [Port: 8723]';
   fMainThreadId:= ThreadID;
   Memo1.Lines.Text:= 'Main Thread Id: '+inttostr(fMainThreadId);
@@ -134,8 +134,8 @@ end;
 
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
-  MsgQueue.FPODetachObserver(fObserver);
-  fObserver.Free;
+//  MsgQueue.FPODetachObserver(fObserver);
+//  fObserver.Free;
 end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
